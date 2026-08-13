@@ -3,3 +3,13 @@ target/
 dbt_modules/
 logs/
 dbt_internal_packages/
+# Python virtual environment
+.venv/
+venv/
+# dbt build artifacts
+target/
+dbt_packages/
+logs/
+# Mac system files
+.DS_Store
+

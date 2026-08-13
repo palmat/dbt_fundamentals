@@ -21,7 +21,8 @@ snapshot-paths: ["snapshots"]
 target-path: "target"  # directory which will store compiled SQL files
 clean-targets:         # directories to be removed by `dbt clean`
     - "target"
-    - "dbt_modules"
+    - "dbt_packages"
+    - "logs"
 
 
 # Configuring models
@@ -33,6 +34,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   jaffle_shop:
-    +materialized: view
-
-    
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
