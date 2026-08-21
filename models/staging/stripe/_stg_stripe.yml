@@ -1,0 +1,12 @@
+models: 
+  - name: stg_stripe__payments
+    description: Payment transactions
+    columns:
+      - name: payment_id
+        description: Unique row per transaction
+      - name: order_id
+      - name: payment_method
+        description: '{{ doc("payment_method") }}'
+      - name: status
+      - name: amount
+      - name: created_at
